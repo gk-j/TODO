@@ -1,0 +1,1 @@
+export const BG_IMG ="https://img.freepik.com/free-photo/clip-rack-with-black-paper-heart_23-2148010224.jpg?w=740&t=st=1720767420~exp=1720768020~hmac=78439c91e91b064d94c90f560c8cc1175ea15aa742d02d59c7f5790b425b81c6"
