@@ -21,7 +21,7 @@ export default function TodoItem({todo}){
         }
 
     return(
-        <div className={`text-red-800 flex flex-row justify-around m-3 items-center bg-neutral-500 w-1/2 ${hide?"hidden":""}`}>
+        <div className={`text-red-800 flex flex-row justify-around shadow-lg rounded-md m-3 items-center bg-neutral-500 w-1/2 ${hide?"hidden":""}`}>
             <h1 className="m-2">{todo?.name}</h1>
             <p>{todo.description}</p>
             <input 
@@ -31,6 +31,7 @@ export default function TodoItem({todo}){
               onChange={()=>handleCompletion(todo._id)}
             />
             <button onClick={()=>deleteTodo(todo._id)}>delete</button>
+            <button>edit</button>
         </div>
     )
 }

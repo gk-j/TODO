@@ -16,7 +16,7 @@ it has the following features:
 
 
   user  - signup,signin,signout
-  todos - add,remove
+  todos - add,remove,search_filter
   todo - name ,description ,done/not done
   user - name,username,email,password,
 

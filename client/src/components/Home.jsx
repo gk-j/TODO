@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 import Todo from "./Todo";
 import TodosList from "./TodosList";
+import SearchBar from "./SearchBar";
 
 export default function Home(){
     
@@ -24,12 +25,10 @@ export default function Home(){
     return(
         <div>
             <Header/>
-            <div className="bg-black">
+            <div className="h-full bg-black">
                 <Todo/>
+                <SearchBar/>
                 <TodosList/>
-            </div>
-            <div>
-                
             </div>
         </div>
     );

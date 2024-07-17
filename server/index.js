@@ -75,6 +75,20 @@ const generateAccessAndRefereshTokens = async(userId) =>{
     }
 }
 
+app.get("/user",verifyJWT,async(req,res)=>{
+    try {
+        const userId = req.user._id;
+        const user = await User.findById(userId).select("-password -refreshToken")
+        if (!user) {
+            return res.status(404).json({ error: "User not found" });
+        }
+        return res.status(200).json({"user":user})
+
+    } catch (error) {
+        return res.status(404).json({"error":"Server Error"})
+    }
+})
+
 app.post("/user/signup",async(req,res)=>{
     const payload = req.body
 

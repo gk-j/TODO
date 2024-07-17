@@ -1,15 +1,16 @@
-import { useState } from "react";
+
+import { RecoilRoot } from "recoil";
 import Body from "./components/Body";
-import { TodoContext } from "./context";
+
 
 function App() {
 
-  const [todos,setTodos] = useState({})
+  
   return (
     <div>
-      <TodoContext.Provider value={{todos,setTodos}}>
+        <RecoilRoot>
         <Body/>
-      </TodoContext.Provider>
+        </RecoilRoot>
     </div>
   );
 }
