@@ -147,14 +147,14 @@ app.post("/user/signin",async(req,res)=>{
 
     const {accessToken, refreshToken} = await generateAccessAndRefereshTokens(user._id)
     const loggedInUser = await User.findById(user._id).select("-password -refreshToken")
-    const options = {
-        httpOnly: true,
-        secure: false,
-        maxAge: 10000000
-    }
+    // const options = {
+    //     httpOnly: true,
+    //     secure: false,
+    //     maxAge: 10000000
+    // }
 
-    res.cookie("accessToken", accessToken)
-    res.cookie("refreshToken", refreshToken)
+    // res.cookie("accessToken", accessToken)
+    // res.cookie("refreshToken", refreshToken)
     return res
     .status(200)
     .json({"msg":"User logged In Successfully",
